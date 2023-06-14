@@ -1,0 +1,6 @@
+{% set total_seconds = remaining_time.total_seconds() %}
+{% set hours = total_seconds // 3600 %}
+{% set minutes = (total_seconds % 3600) // 60 %}
+{% set seconds = total_seconds % 60 %}
+
+<h3>{{ "%02d:%02d:%02d" % (hours, minutes, seconds) }}</h3>
